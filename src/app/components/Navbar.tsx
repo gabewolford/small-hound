@@ -6,7 +6,7 @@ export default function Navbar() {
     const formattedTime: string = currentTime.toLocaleString(undefined, options);
 
     return (
-            <nav className="flex justify-between items-start ml-4 md:ml-8 mr-4">
+            <nav className="flex justify-between items-start">
                 <div>
                     <Link href="/" className="text-[32px] lg:text-[84px] leading-none bold">Small Hound</Link>
                 </div>
