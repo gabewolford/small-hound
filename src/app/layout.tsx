@@ -15,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        {children}
+      <body className='ml-4 md:ml-11 mr-4 my-4 md:my-8'>
         <Navbar />
+        {children}
         <Analytics />
       </body>
     </html>
