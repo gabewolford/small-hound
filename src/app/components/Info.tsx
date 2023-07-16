@@ -5,7 +5,7 @@ import Services from "./Services";
 
 export default function Info() {
     return (
-        <section className="flex flex-col md:flex-row items-start gap-[18px]">
+        <section className="flex flex-col md:flex-row items-start gap-[36px] lg:gap-[18px]">
             <Logo />
             <About />
             <Services />
