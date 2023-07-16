@@ -1,6 +1,6 @@
 export default function SizzleReel() {
     return(
-        <section>
+        <section className="mb-16">
             sizzle reel placeholder
         </section>
     )
