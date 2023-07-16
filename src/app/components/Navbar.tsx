@@ -1,27 +1,50 @@
+'use client'
+
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
-    const currentTime: Date = new Date();
-    const options: Intl.DateTimeFormatOptions = { hour: 'numeric', minute: 'numeric', hour12: true, timeZoneName: 'short' };
-    const formattedTime: string = currentTime.toLocaleString(undefined, options);
+    const [formattedTime, setFormattedTime] = useState('');
+  
+    useEffect(() => {
+        const updateTime = (): void => {
+        const currentTime: Date = new Date();
+        const options: Intl.DateTimeFormatOptions = {
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true,
+            timeZoneName: 'short',
+        };
+        const newFormattedTime: string = currentTime.toLocaleString(undefined, options);
+        setFormattedTime(newFormattedTime);
+        };
+
+    updateTime(); 
+
+    const interval: NodeJS.Timeout = setInterval(updateTime, 60000);
+
+    return () => {
+        clearInterval(interval);
+    };
+    }, []);
 
     return (
-            <nav className="flex justify-between items-start">
+            <nav className="flex justify-between">
                 <div>
                     <Link href="/" className="text-[32px] lg:text-[84px] leading-none bold">Small Hound</Link>
                 </div>
 
-                <div>
-                    <h5>Portland, OR</h5>
+                <div className="md:mr-36">
+                    <h5 className="text-sm md:text-base">Portland, OR</h5>
                 </div>
         
-                <div className="hidden md:block">
+                <div className="hidden md:inline-block md:mr-12">
                     <h5>{formattedTime}</h5>
                 </div>
 
-                <button className="hidden md:block">
-                    <Link href="mailto:hi@smallhound.co" className="text-white bold bg-red transition duration-300 ease-in-out rounded-full p-4 w-fit">Get in touch</Link>
-                </button>
+                <div className="hidden md:inline-block mr-4">
+                    <Link href="mailto:hi@smallhound.co" className="text-white bold bg-red p-4 rounded-full">Get in touch</Link>
+                </div>
             </nav>
     )
   }
