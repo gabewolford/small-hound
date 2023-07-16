@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/react'
 import Navbar from './components/Navbar'
 import SizzleReel from './components/SizzleReel'
 import Footer from './components/Footer'
-import Info from './components/Info'
+import Info from './components/Info/Info'
 
 export const metadata: Metadata = {
   title: 'Small Hound',
