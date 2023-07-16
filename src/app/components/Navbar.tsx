@@ -29,20 +29,20 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className="flex justify-between">
-            <div>
-                <Link href="/" className="text-[32px] lg:text-[84px] leading-none bold">Small Hound</Link>
+        <nav className="grid grid-cols-13">
+            <div className="col-start-1 col-end-5">
+                <Link href="/" className="text-[32px] md:text-[48px] lg:text-[84px] leading-none bold">Small Hound</Link>
             </div>
 
-            <div className="md:mr-36">
+            <div className="col-start-5 col-end-7 text-right md:text-start">
                 <h5 className="text-sm md:text-base">Portland, OR</h5>
             </div>
 
-            <div className="hidden md:inline-block md:mr-12">
+            <div className="hidden md:block md:text-base col-start-9 col-end-11">
                 <h5>{formattedTime}</h5>
             </div>
 
-            <div className="hidden md:inline-block mr-4">
+            <div className="hidden md:block mr-4 col-start-11 col-end-13 text-right">
                 <Link href="mailto:hi@smallhound.co" className="text-white bold bg-red p-4 rounded-full">Get in touch</Link>
             </div>
         </nav>
