@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react'
 import Navbar from './components/Navbar'
 import SizzleReel from './components/SizzleReel'
 import Footer from './components/Footer'
+import Info from './components/Info'
 
 export const metadata: Metadata = {
   title: 'Small Hound',
@@ -21,6 +22,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <SizzleReel />
+        <Info />
         <Analytics />
         <Footer />
       </body>
