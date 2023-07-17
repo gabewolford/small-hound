@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='m-4 md:mx-11 md:my-8'>
+      <body className='mx-4 md:mx-11'>
         <Navbar />
         {children}
         <SizzleReel />
