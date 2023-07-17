@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
     const [formattedTime, setFormattedTime] = useState('');
-  
+
     useEffect(() => {
         const updateTime = (): void => {
             const currentTime: Date = new Date();
@@ -14,15 +14,16 @@ export default function Navbar() {
                 minute: 'numeric',
                 hour12: true,
                 timeZoneName: 'short',
+                timeZone: 'America/Los_Angeles'
             };
             const newFormattedTime: string = currentTime.toLocaleString(undefined, options);
             setFormattedTime(newFormattedTime);
         };
-
+    
         updateTime(); 
-
+    
         const interval: NodeJS.Timeout = setInterval(updateTime, 60000);
-
+    
         return () => {
             clearInterval(interval);
         };
