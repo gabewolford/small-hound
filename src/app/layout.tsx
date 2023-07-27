@@ -9,6 +9,9 @@ import Info from './components/Info/Info'
 export const metadata: Metadata = {
   title: 'Small Hound',
   description: 'Independent digital product & web studio.',
+  icons: {
+    icon: '/images/icon.png'
+  }
 }
 
 export default function RootLayout({
