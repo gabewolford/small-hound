@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
-import Navbar from './components/Navbar'
+import Header from './components/Header'
 import SizzleReel from './components/SizzleReel'
 import Footer from './components/Footer'
 import Info from './components/Info/Info'
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={apercuRegular.className}>
       <body className='mx-4 md:mx-11'>
-        <Navbar />
+        <Header />
         {children}
         <SizzleReel />
         <Info />
