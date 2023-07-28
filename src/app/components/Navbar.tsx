@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { apercuBold } from "../styles/fonts";
 
 export default function Navbar(): JSX.Element {
   const [formattedTime, setFormattedTime] = useState<string>("");
@@ -45,9 +46,9 @@ export default function Navbar(): JSX.Element {
 
   return (
     <nav className={`py-8 flex flex-row items-center justify-between ${isScrolled ? "scrolled sticky flex flex-row justify-between" : ""}`}>
-      <h1 className={`text-[2rem] lg:text-[8rem] xl:text-[10rem] leading-none lg:pt-6 bold transition-all ease-in-out duration-500 ${isScrolled ? "lg:text-[2rem] lg:leading-none lg:pt-6 lg:bold" : ""}`}>Small&nbsp;Hound</h1>
+      <h1 className={`${apercuBold.className} text-[2rem] lg:text-[8rem] xl:text-[10rem] leading-none lg:pt-6 bold transition-all ease-in-out duration-500 ${isScrolled ? "lg:text-[2rem] lg:leading-none lg:pt-6 lg:bold" : ""}`}>Small&nbsp;Hound</h1>
       <div className="flex justify-between items-start pl-8 gap-8 sticky">
-        <h5 className="pt-4 hidden md:block">{formattedTime}</h5>
+        <h5 className="pt-4 hidden md:inline-block">{formattedTime}</h5>
         <Link href="mailto:hi@smallhound.co" className="p-4 text-white bg-red rounded-full">Get in touch</Link>
       </div>
     </nav>

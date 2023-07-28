@@ -1,9 +1,10 @@
 import Link from "next/link"
+import { apercuMedium } from "@/app/styles/fonts"
 
 export default function Clients() {
     return (
         <div className="lg:col-span-3 flex flex-col md:px-8 gap-4 border-red md:border-l md:border-t-0 border-t pt-[18px] md:pt-0 self-stretch flex100">
-            <h2 className="text-[24px] leading-[38.40px]">Clients</h2>
+            <h2 className={`text-[24px] leading-[38.40px] ${apercuMedium.className}`}>Clients</h2>
             <ul className="leading-6">
                 <li>
                     <Link href="https://www.morf.health/" target="_blank">Morf Health</Link>
