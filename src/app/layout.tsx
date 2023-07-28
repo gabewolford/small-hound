@@ -10,6 +10,7 @@ import { apercuRegular } from './styles/fonts'
 export const metadata: Metadata = {
   title: 'Small Hound',
   description: 'Independent digital product & web studio.',
+  keywords: 'independent digital product and web studio, digital experience, products and services, ui design, ux design, end-to-end product design, product strategy, brand identity and expression, mobile-first web design, morf health, first republic bank, islamorada fishing, arist, june care, parsley health, burrow, amazon alexa',
   icons: {
     icon: '/images/icon.png'
   }
