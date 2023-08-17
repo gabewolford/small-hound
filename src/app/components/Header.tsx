@@ -6,7 +6,6 @@ import { apercuBold } from "../styles/fonts";
 
 export default function Header(): JSX.Element {
   const [formattedTime, setFormattedTime] = useState<string>("");
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   useEffect(() => {
     const updateTime = (): void => {

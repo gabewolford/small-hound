@@ -10,7 +10,9 @@ export default function Services() {
                 <li>Product Strategy</li>
                 <li>Brand Identity & Expression</li>
                 <li>Mobile-First Web Design</li>
-                <li>Front-End Devlopment</li>
+                <li>Full Stack Web Development</li>
+                <li>Front End Development</li>
+                <li>Headless Development</li>
             </ul>
         </div>
     )
